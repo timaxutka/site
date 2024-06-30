@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+  background-color: #373D44;
+  color: white;
+  padding-top: 30px; /* Отступ от верха футера */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    margin-right: 40px;
+    width: 410px;
+    height: 111px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 60px;
+}
+
+nav ul li {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0088CC;
+    margin-left: 55px;
+    /* margin-right: 80px; */
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.user span {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.news-banner {
+    background-color: #0088CC;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.news-content {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.news-content h2 {
+    font-weight: 400;
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 40px 80px 0 0;
+}
+
+.search-box {
+    position: relative;
+    width: 410px;
+    height: 36px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    border: 1px solid #434343;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+.search-box input::placeholder {
+    color: #ccc;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+.year-selector-container {
+    position: relative;
+    margin-right: 40px;
+    width: 150px;
+    height: 36px;
+}
+
+.year-selector {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    padding-right: 40px; /* Отступ для иконки */
+    border: 1px solid #434343;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    background-color: #fff;
+    appearance: none; /* Убирает стандартный стиль браузера */
+    -webkit-appearance: none; /* Убирает стандартный стиль браузера в WebKit */
+    -moz-appearance: none; /* Убирает стандартный стиль браузера в Firefox */
+    box-sizing: border-box;
+}
+
+.year-selector-icon {
+    position: absolute;
+    right: 10px; /* Отступ для иконки */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    pointer-events: none; /* Иконка не будет мешать взаимодействию с селектом */
+}
+
+.news-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 80px 0 380px;
+}
+
+.news-post {
+    width: 457px;
+    height: 457px;
+    margin-bottom: 40px;
+}
+
+.news-post img {
+    width: 100%;
+    height: 273px;
+    object-fit: cover;
+}
+
+.news-post .date {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #494949;
+}
+
+.news-post .title {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.social-block {
+    position: absolute;
+    top: 427; 
+    left: 80px;
+    width: 260px;
+    height: 205px;
+    border: 1px solid #E0E6EB;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    font-family: 'Tahoma', sans-serif;
+    letter-spacing: 4%;
+}
+
+.social-block img.background {
+    width: 258px;
+    height: 78px;
+    border-radius: 2px 2px 0 0;
+}
+
+.social-block img.avatar {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.social-block .name {
+    position: absolute;
+    top: 12px;
+    left: 58px; /* 12px + 34px + 10px */
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+}
+
+.social-block .description {
+    position: absolute;
+    top: 54px;
+    left: 12px;
+    font-weight: normal;
+    font-size: 12px;
+    color: white;
+}
+
+.social-block .followers {
+    position: absolute;
+    top: 88px;
+    left: 13px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #626D7A;
+}
+
+.social-block .followers-images {
+    position: absolute;
+    top: 110px;
+    left: 13px; /* 13px + 97px */
+    display: flex;
+    gap: 8px;
+}
+
+.social-block .followers-images img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.social-block .subscribe-button {
+    position: absolute;
+    bottom: 14px;
+    left: 13px;
+    width: 234px;
+    height: 30px;
+    background-color: #0088CC;
+    border-radius: 7px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer-nav {
+  display: flex;
+  /* justify-content: space-between; */
+  /* padding: 0 80px; */
+  /* max-width: 600px;  Ограничиваем максимальную ширину блока контента */
+}
+
+.footer-nav div, .footer-nav .contacts {
+  text-align: left;
+}
+
+.footer-nav div {
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.footer-nav div a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-nav div p {
+  color: rgba(255, 255, 255, 0.7); /* Делаем подразделы темнее */
+}
+
+.line {
+  height: 1px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center; /* выравнивание по горизонтали */
+  align-items: center; /* выравнивание по вертикали */
+}
+
+.footer-images img {
+  margin: 0 0 20px 0;
+}
+
+.footer-images img:first-child {
+  width: 60px;
+  height: 60px;
+}
+
+.footer-images img:last-child {
+  width: 117px;
+  height: 60px;
+}
